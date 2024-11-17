@@ -6,6 +6,9 @@ lze.load {
 
     lspconfig.tinymist.setup {
       cmd = { NIX_VALUES.tinymist_path };
+      settings = {
+        formatterMode = "typstyle",
+      }
     }
   end
 }
