@@ -14,7 +14,7 @@
       };
 
       tide-wrapped = mnw.lib.wrap pkgs (import ./wrapping.nix inputs pkgs);
-      tide = pkgs.writeShellScriptBin "tide" "${tide-wrapped}/bin/nvim";
+      tide = pkgs.writeShellScriptBin "tide" "${tide-wrapped}/bin/nvim $@";
     in {
       packages = {
         inherit tide;
