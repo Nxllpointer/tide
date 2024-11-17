@@ -8,7 +8,8 @@ lze.load {
       cmd = { NIX_VALUES.tinymist_path };
       settings = {
         formatterMode = "typstyle",
-      }
+      },
+      capabilities = require('blink.cmp').get_lsp_capabilities({}, true)
     }
   end
 }

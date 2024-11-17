@@ -19,6 +19,7 @@ inputs: pkgs: let
       name = "lspconfig";
       src = inputs.nvim-lspconfig;
     }
+    inputs.blink-cmp.packages.${pkgs.system}.blink-cmp
   ];
 
   setIsOptional = isOptional: plugins:

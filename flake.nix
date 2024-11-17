@@ -51,5 +51,7 @@
       url = "github:neovim/nvim-lspconfig";
       flake = false;
     };
+
+    blink-cmp.url = "github:Saghen/blink.cmp";
   };
 }
