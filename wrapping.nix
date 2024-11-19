@@ -8,6 +8,9 @@ inputs: pkgs: let
       name = "tide";
       src = ./tide-nvim;
     }
+    (pkgs.vimPlugins.nvim-treesitter.withPlugins (
+      plugins: with plugins; [ typst ]
+    ))
   ];
 
   optPlugins = [
