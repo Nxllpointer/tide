@@ -365,11 +365,11 @@
         "typst": "typst"
       },
       "locked": {
-        "lastModified": 1731776450,
-        "narHash": "sha256-Q3g/FA9K0xuVvj9o4Y4+hLeLoJTnKJRVYxHqbvJOhI0=",
+        "lastModified": 1732046949,
+        "narHash": "sha256-JO+BJS2pNoEz8ZBB+kesNYPuhE3If0vfEchfkb6oCr8=",
         "owner": "Nxllpointer",
         "repo": "tinymist",
-        "rev": "b833779cf8afb3150a2a70d2dfb4338bbe7ad3d4",
+        "rev": "1b9d407d50ea255e30f7204c9b2744d19cc4c3f1",
         "type": "github"
       },
       "original": {
