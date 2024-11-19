@@ -3,18 +3,7 @@ lze.load {
   dep_of = "lspconfig",
   after = function()
     require("blink.cmp").setup {
-      keymap = {
-        preset = "enter",
-        ['<C-space>'] = { 
-          'show',
-          require("blink.cmp.trigger.signature").show,
-          'show_documentation', 'hide_documentation'
-        },
-        ['<C-e>'] = { 
-          vim.schedule_wrap(require("blink.cmp.trigger.signature").hide), 
-          'hide'
-        },
-      },
+      keymap = require("tide.mappings").blink(),
       trigger = { signature_help = { enabled = true } },
       accept = { auto_brackets = { enabled = true } },
     }
