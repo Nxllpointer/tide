@@ -9,7 +9,11 @@ lze.load {
       settings = {
         formatterMode = "typstyle",
       },
-      capabilities = require('blink.cmp').get_lsp_capabilities({}, true)
+      capabilities = require('blink.cmp').get_lsp_capabilities({}, true),
+      on_attach = function(client, buffer)
+        preview = require("tide.preview")
+        preview.create_autocmds(buffer)
+      end
     }
   end
 }
