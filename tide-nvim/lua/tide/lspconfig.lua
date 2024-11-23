@@ -1,3 +1,5 @@
+vim.lsp.set_log_level("debug")
+
 lze.load {
   "lspconfig",
   ft = {"typst"},
@@ -13,6 +15,7 @@ lze.load {
       on_attach = function(client, buffer)
         preview = require("tide.preview")
         preview.create_autocmds(buffer)
+        require("which-key").add(require("tide.mappings").preview(buffer))
       end
     }
   end

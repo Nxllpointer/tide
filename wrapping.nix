@@ -23,6 +23,14 @@ inputs: pkgs: let
       src = inputs.nvim-lspconfig;
     }
     inputs.blink-cmp.packages.${pkgs.system}.blink-cmp
+    {
+      name = "nvim-web-devicons";
+      src = inputs.nvim-web-devicons;
+    }
+    {
+      name = "which-key";
+      src = inputs.which-key;
+    }
   ];
 
   setIsOptional = isOptional: plugins:

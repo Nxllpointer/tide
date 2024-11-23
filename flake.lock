@@ -271,6 +271,22 @@
         "type": "github"
       }
     },
+    "nvim-web-devicons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732225809,
+        "narHash": "sha256-PvQ6Q4+08uf4gVH5tsVRB+7AuDSubDUUbPiUDyNAbzc=",
+        "owner": "nvim-tree",
+        "repo": "nvim-web-devicons",
+        "rev": "f09be61d05bebcba85bb47be1931322d51b95644",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-tree",
+        "repo": "nvim-web-devicons",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "blink-cmp": "blink-cmp",
@@ -280,8 +296,10 @@
         "mnw": "mnw",
         "nixpkgs": "nixpkgs_2",
         "nvim-lspconfig": "nvim-lspconfig",
+        "nvim-web-devicons": "nvim-web-devicons",
         "systems": "systems",
-        "tinymist-rnote": "tinymist-rnote"
+        "tinymist-rnote": "tinymist-rnote",
+        "which-key": "which-key"
       }
     },
     "rust-analyzer-src": {
@@ -400,6 +418,22 @@
         "owner": "Nxllpointer",
         "ref": "rnote",
         "repo": "typst",
+        "type": "github"
+      }
+    },
+    "which-key": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730919714,
+        "narHash": "sha256-5t6UnOP2+CXB55/C4YWbp2pE+xKDLMvCJK8m085Fk4w=",
+        "owner": "folke",
+        "repo": "which-key.nvim",
+        "rev": "68e37e12913a66b60073906f5d3f14dee0de19f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "which-key.nvim",
         "type": "github"
       }
     }

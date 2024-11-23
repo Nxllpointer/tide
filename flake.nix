@@ -53,5 +53,15 @@
     };
 
     blink-cmp.url = "github:Saghen/blink.cmp";
+    
+    nvim-web-devicons = {
+      url = "github:nvim-tree/nvim-web-devicons";
+      flake = false;
+    };
+
+    which-key = {
+      url = "github:folke/which-key.nvim";
+      flake = false;
+    };
   };
 }
