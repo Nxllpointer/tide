@@ -17,6 +17,13 @@ function M.blink()
   }
 end
 
+function M.neotree()
+  return {
+    ["<space>"] = "none", -- Fix for using space as <leader>
+    ["n"] = "new_typst_note" -- Copt the typst template to the specified location in the current context
+  }
+end
+
 function M.preview(buffer)
   local preview = require("tide.preview")
   return {
@@ -31,7 +38,7 @@ end
 
 function M.other()
   return {
-
+    { "<leader><tab>", vim.cmd.Neotree, desc = "Open File Tree" }
   }
 end
 

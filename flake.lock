@@ -183,6 +183,22 @@
         "type": "github"
       }
     },
+    "neo-tree": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726542367,
+        "narHash": "sha256-Lqt0KJNT9HmpJwZoWChYeVBrDWhscRe8COqVCwgcTwk=",
+        "owner": "nvim-neo-tree",
+        "repo": "neo-tree.nvim",
+        "rev": "a77af2e764c5ed4038d27d1c463fa49cd4794e07",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neo-tree",
+        "repo": "neo-tree.nvim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1731245184,
@@ -255,6 +271,22 @@
         "type": "github"
       }
     },
+    "nui": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726376728,
+        "narHash": "sha256-90Wq+vT361mTaGU/SvAezqJkX9HHmZ2GI2fKBDxPn04=",
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
+        "rev": "b58e2bfda5cea347c9d58b7f11cf3012c7b3953f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
+        "type": "github"
+      }
+    },
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
@@ -287,6 +319,22 @@
         "type": "github"
       }
     },
+    "plenary": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726602776,
+        "narHash": "sha256-bmmPekAvuBvLQmrnnX0n+FRBqfVxBsObhxIEkDGAla4=",
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "rev": "2d9b06177a975543726ce5c73fca176cedbffe9d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "blink-cmp": "blink-cmp",
@@ -294,9 +342,12 @@
         "flake-utils": "flake-utils",
         "lze": "lze",
         "mnw": "mnw",
+        "neo-tree": "neo-tree",
         "nixpkgs": "nixpkgs_2",
+        "nui": "nui",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-web-devicons": "nvim-web-devicons",
+        "plenary": "plenary",
         "systems": "systems",
         "tinymist-rnote": "tinymist-rnote",
         "which-key": "which-key"

@@ -63,5 +63,20 @@
       url = "github:folke/which-key.nvim";
       flake = false;
     };
+    
+    plenary = {
+      url = "github:nvim-lua/plenary.nvim";
+      flake = false;
+    };
+
+    nui = {
+      url = "github:MunifTanjim/nui.nvim";
+      flake = false;
+    };
+
+    neo-tree = {
+      url = "github:nvim-neo-tree/neo-tree.nvim";
+      flake = false;
+    };
   };
 }

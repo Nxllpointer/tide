@@ -31,6 +31,18 @@ inputs: pkgs: let
       name = "which-key";
       src = inputs.which-key;
     }
+    {
+      name = "plenary";
+      src = inputs.plenary;
+    }
+    {
+      name = "nui";
+      src = inputs.nui;
+    }
+    {
+      name = "neo-tree";
+      src = inputs.neo-tree;
+    }
   ];
 
   setIsOptional = isOptional: plugins:
