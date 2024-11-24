@@ -2,28 +2,23 @@ vim.g.mapleader = " "
 
 local M = {}
 
-function M.blink()
+-- General keybinds
+function M.other()
   return {
-    preset = "enter",
-    ['<C-space>'] = { 
-      'show',
-      require("blink.cmp.trigger.signature").show,
-      'show_documentation', 'hide_documentation'
-    },
-    ['<C-e>'] = { 
-      vim.schedule_wrap(require("blink.cmp.trigger.signature").hide), 
-      'hide'
-    },
+    { "<leader><tab>", vim.cmd.Neotree, desc = "Open File Tree" }
   }
 end
 
+-- File tree keybinds
+-- Press ? to show the help window
 function M.neotree()
   return {
     ["<space>"] = "none", -- Fix for using space as <leader>
-    ["n"] = "new_typst_note" -- Copt the typst template to the specified location in the current context
+    ["n"] = "new_typst_note" -- Copy the typst template to the specified location in the current context
   }
 end
 
+-- Keybinds when a preview server is attached
 function M.preview(buffer)
   local preview = require("tide.preview")
   return {
@@ -36,6 +31,7 @@ function M.preview(buffer)
   }
 end
 
+-- Keybinds for typst files
 function M.typst(buffer)
   return {
     mode = "n",
@@ -53,9 +49,20 @@ function M.typst(buffer)
   }
 end
 
-function M.other()
+-- Keybinds for autocompletion
+-- Multiple actions are cycled when pressing the keybind multiple times
+function M.blink()
   return {
-    { "<leader><tab>", vim.cmd.Neotree, desc = "Open File Tree" }
+    preset = "enter", -- See https://github.com/Saghen/blink.cmp/blob/4cc0e2bc27fc5ff67f846808e42d3046e05c2f11/lua/blink/cmp/keymap.lua#L47
+    ['<C-space>'] = { 
+      'show',
+      require("blink.cmp.trigger.signature").show,
+      'show_documentation', 'hide_documentation'
+    },
+    ['<C-e>'] = { 
+      vim.schedule_wrap(require("blink.cmp.trigger.signature").hide), 
+      'hide'
+    },
   }
 end
 
