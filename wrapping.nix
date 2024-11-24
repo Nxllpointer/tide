@@ -69,6 +69,7 @@ in {
     ''
       NIX_VALUES = {
         tinymist_path = "${pkgs.tinymist-rnote}/bin/tinymist";
+        rnote_path = "${pkgs.rnote}/bin/rnote";
       };
     '';
 }

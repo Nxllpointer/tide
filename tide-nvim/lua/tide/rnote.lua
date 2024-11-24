@@ -1,7 +1,7 @@
 local M = {}
 
 function M.open(file)
-  vim.system { "rnote", file }
+  vim.system { NIX_VALUES.rnote_path, file }
 end
 
 -- Open rnote files externally
