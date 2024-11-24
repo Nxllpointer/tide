@@ -1,6 +1,7 @@
 lze.load {
   "neo-tree",
   cmd = "Neotree",
+  on_require = "neo-tree",
   after = function()
     local log = require("neo-tree.log")
     local utils = require("neo-tree.utils")

@@ -36,6 +36,23 @@ function M.preview(buffer)
   }
 end
 
+function M.typst(buffer)
+  return {
+    mode = "n",
+    buffer = buffer,
+    { 
+      "<leader>n",
+      function() 
+        local tideproject = require("tide.tideproject").current()
+        if tideproject ~= nil then
+          tideproject:new_rnote_doc()
+        end
+      end,
+      desc = "New Rnote Document"
+    }
+  }
+end
+
 function M.other()
   return {
     { "<leader><tab>", vim.cmd.Neotree, desc = "Open File Tree" }
