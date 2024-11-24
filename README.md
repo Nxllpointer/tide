@@ -27,7 +27,7 @@ Language integration and real-time previewing is provided by [tinymist](https://
     1. Enter `about:profiles` into the address bar
     1. Create a new profile with the name `tide-preview`
     1. Select your old profile as the default profile
-1. Creating a tide project
+1. Creating a tide project (Or use the [tide-example](https://github.com/Nxllpointer/tide-example))
     1. Create a `tideproject.json` file in the root of your project directory
     1. Set the desired and required options ([See the reference](#reference-for-tideprojectjson))
   
