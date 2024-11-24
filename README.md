@@ -3,6 +3,10 @@ Tired of using proprietary applications to take notes? \
 Can't choose between text-based ⌨️ or handwritten 📝 notes? \
 Tide has got you covered! Don't compromise - do both!
 
+## Showcase
+https://github.com/user-attachments/assets/190de0b5-ae3d-4cfd-8b33-4a41098b0d0b
+
+
 ## How does it work?
 Tide is a [neovim](https://neovim.io/) configuration specifically crafted for notetaking,
 making use of the [typst](https://github.com/typst/typst) typesetting tool
