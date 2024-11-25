@@ -9,7 +9,9 @@ require("tide.treesitter")
 require("tide.lspconfig")
 require("tide.completion")
 require("tide.neotree")
+require("tide.lualine")
 require("tide.rnote")
 
 vim.o.clipboard = "unnamedplus"
 vim.o.scrolloff = 5
+vim.o.showmode = false

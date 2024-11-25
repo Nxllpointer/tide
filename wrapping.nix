@@ -43,6 +43,10 @@ inputs: pkgs: let
       name = "neo-tree";
       src = inputs.neo-tree;
     }
+    {
+      name = "lualine";
+      src = inputs.lualine;
+    }
   ];
 
   setIsOptional = isOptional: plugins:

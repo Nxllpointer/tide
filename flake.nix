@@ -78,5 +78,10 @@
       url = "github:nvim-neo-tree/neo-tree.nvim";
       flake = false;
     };
+
+    lualine = {
+      url = "github:nvim-lualine/lualine.nvim";
+      flake = false;
+    };
   };
 }

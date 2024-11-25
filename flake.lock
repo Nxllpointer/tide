@@ -152,6 +152,22 @@
         "type": "github"
       }
     },
+    "lualine": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731050126,
+        "narHash": "sha256-IN6Qz3jGxUcylYiRTyd8j6me3pAoqJsJXtFUvph/6EI=",
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "rev": "2a5bae925481f999263d6f5ed8361baef8df4f83",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "type": "github"
+      }
+    },
     "lze": {
       "flake": false,
       "locked": {
@@ -340,6 +356,7 @@
         "blink-cmp": "blink-cmp",
         "catppuccin": "catppuccin",
         "flake-utils": "flake-utils",
+        "lualine": "lualine",
         "lze": "lze",
         "mnw": "mnw",
         "neo-tree": "neo-tree",

@@ -2,7 +2,7 @@ local M = {}
 
 local CONFIG_NAME = "tideproject.json"
 
-function M.root_detector(filepath, buffer)
+function M.root_detector(filepath)
   return vim.fs.root(filepath, { CONFIG_NAME })
 end
 
@@ -101,6 +101,25 @@ end
 
 function M.current()
   return M.open(vim.fn.getcwd())
+end
+
+function M.status_item()
+  local status
+
+  local root = vim.fn.getcwd()
+  if vim.fn.filereadable(vim.fs.joinpath(root, CONFIG_NAME)) ~= 0 then
+    local config_status = pcall(load_config, root)
+
+    if config_status then
+      status = "Active"
+    else
+      status = "Config error"
+    end
+  else
+    status = "Not found"
+  end
+  
+  return "Tideproject: " .. status
 end
 
 return M
