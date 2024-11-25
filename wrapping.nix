@@ -63,6 +63,8 @@ in {
   withRuby = false;
 
   plugins = (setIsOptional false startPlugins) ++ (setIsOptional true optPlugins);
+  
+  extraBinPath = with pkgs; [ xclip wl-clipboard ];
 
   initLua =
     # lua
