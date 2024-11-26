@@ -1,3 +1,6 @@
+vim.o.showtabline = 0
+vim.o.showmode = false
+
 lze.load {
   "lualine",
   event = "DeferredUIEnter",
@@ -11,8 +14,8 @@ lze.load {
         lualine_b = { "branch", "diff" },
         lualine_c = {},
         lualine_x = { "searchcount", "selectioncount" },
-        lualine_y = { 'require("tide.tideproject").status_item()' },
-        lualine_z = { "mode" }
+        lualine_y = { { "tabs", show_modified_status = false } },
+        lualine_z = { 'require("tide.tideproject").status_item()' }
       },
       winbar = {
         lualine_a = { { 'filename', path = 1 } },
@@ -23,7 +26,7 @@ lze.load {
         lualine_z = { "filetype" }
       },
       inactive_winbar = {
-        lualine_a = { { "filename", path = 1 }},
+        lualine_a = { { "filename", path = 1 } },
         lualine_b = {},
         lualine_c = {},
         lualine_x = {},

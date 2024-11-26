@@ -14,4 +14,3 @@ require("tide.rnote")
 
 vim.o.clipboard = "unnamedplus"
 vim.o.scrolloff = 5
-vim.o.showmode = false
