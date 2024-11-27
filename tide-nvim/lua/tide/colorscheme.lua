@@ -14,6 +14,7 @@ lze.load {
       integrations = {
         blink_cmp = true,
         neotree = true,
+        which_key = true,
         native_lsp = { -- Having to specify all values is considered a bug https://github.com/catppuccin/nvim/issues/763
           enabled = true,
           virtual_text = {
