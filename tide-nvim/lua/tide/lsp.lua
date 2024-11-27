@@ -7,3 +7,5 @@ vim.lsp.handlers[vim.lsp.protocol.Methods.textDocument_hover] = function(err, re
     vim.api.nvim_win_set_width(window, vim.api.nvim_win_get_width(window) + 2) -- Add space for signcolumn
   end
 end
+
+vim.lsp.inlay_hint.enable(true)
