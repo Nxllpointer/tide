@@ -1,5 +1,3 @@
-vim.lsp.set_log_level("debug")
-
 lze.load {
   "lspconfig",
   ft = {"typst"},
