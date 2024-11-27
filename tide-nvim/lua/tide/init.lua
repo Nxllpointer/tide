@@ -22,3 +22,9 @@ vim.o.signcolumn = "number"
 vim.o.wrap = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+vim.o.shiftwidth = 2
+vim.o.softtabstop = -1 -- Follow shiftwidth
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.autoindent = true
