@@ -184,6 +184,22 @@
         "type": "github"
       }
     },
+    "markview": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732341583,
+        "narHash": "sha256-4D4jB9CmamMAdpEodw4MdDyJVU6EMsh8P4gLs7p4E40=",
+        "owner": "OXY2DEV",
+        "repo": "markview.nvim",
+        "rev": "72cd34279e94ee96ee33bdf30a87b00e6d45319d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "OXY2DEV",
+        "repo": "markview.nvim",
+        "type": "github"
+      }
+    },
     "mnw": {
       "locked": {
         "lastModified": 1731821965,
@@ -358,6 +374,7 @@
         "flake-utils": "flake-utils",
         "lualine": "lualine",
         "lze": "lze",
+        "markview": "markview",
         "mnw": "mnw",
         "neo-tree": "neo-tree",
         "nixpkgs": "nixpkgs_2",

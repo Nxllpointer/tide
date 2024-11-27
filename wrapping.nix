@@ -9,7 +9,7 @@ inputs: pkgs: let
       src = ./tide-nvim;
     }
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (
-      plugins: with plugins; [ typst ]
+      plugins: with plugins; [ typst markdown markdown_inline html ]
     ))
   ];
 
@@ -46,6 +46,10 @@ inputs: pkgs: let
     {
       name = "lualine";
       src = inputs.lualine;
+    }
+    {
+      name = "markview";
+      src = inputs.markview;
     }
   ];
 

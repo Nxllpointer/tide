@@ -83,5 +83,10 @@
       url = "github:nvim-lualine/lualine.nvim";
       flake = false;
     };
+
+    markview = {
+      url = "github:OXY2DEV/markview.nvim";
+      flake = false;
+    };
   };
 }
