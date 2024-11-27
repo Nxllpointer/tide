@@ -20,3 +20,5 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = "number"
 vim.o.wrap = false
+vim.o.ignorecase = true
+vim.o.smartcase = true
