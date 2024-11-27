@@ -12,7 +12,8 @@ lze.load {
     require("catppuccin").setup({
       default_integrations = false,
       integrations = {
-        blink_cmp = true
+        blink_cmp = true,
+        neotree = true
       },
     })
 
