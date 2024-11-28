@@ -9,7 +9,14 @@ function M.other()
     { "<leader><leader>", function() vim.cmd.Telescope("find_files") end, desc = "Open File Finder" },
     { "<leader>b", function() vim.cmd.Telescope("buffers") end, desc = "List Buffers" },
     { "<leader>g", function() vim.cmd.Telescope("live_grep") end, desc = "Grep Working Directory" },
-    { "<leader>r", function() vim.cmd.Telescope("resume") end, desc = "Resume Telescope" }
+    { "<leader>r", function() vim.cmd.Telescope("resume") end, desc = "Resume Telescope" },
+    { "<leader>c", group = "Code" },
+    { "<leader>ca", vim.lsp.buf.code_action, desc = "Action" },
+    { "<leader>cr", vim.lsp.buf.rename, desc = "Rename" },
+    { "<leader>cf", vim.lsp.buf.format, desc = "Format" },
+    { "<leader>cd", function() vim.cmd.Telescope("lsp_definitions") end, desc = "Definitions" },
+    { "<leader>cu", function() vim.cmd.Telescope("lsp_references") end, desc = "Usages" },
+    { "<leader>cs", function() vim.cmd.Telescope("lsp_document_symbols") end, desc = "Symbols" }
   }
 end
 
