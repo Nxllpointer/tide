@@ -383,6 +383,7 @@
         "nvim-web-devicons": "nvim-web-devicons",
         "plenary": "plenary",
         "systems": "systems",
+        "telescope": "telescope",
         "tinymist-rnote": "tinymist-rnote",
         "which-key": "which-key"
       }
@@ -460,6 +461,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "telescope": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730164948,
+        "narHash": "sha256-Qa/f+0asQvA8mhIUajC4BGZCI92OqA6ySVoQSC3ZY3s=",
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
+        "rev": "85922dde3767e01d42a08e750a773effbffaea3e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
         "type": "github"
       }
     },

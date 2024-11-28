@@ -51,6 +51,10 @@ inputs: pkgs: let
       name = "markview";
       src = inputs.markview;
     }
+    {
+      name = "telescope";
+      src = inputs.telescope;
+    }
   ];
 
   setIsOptional = isOptional: plugins:
@@ -72,7 +76,7 @@ in {
 
   plugins = (setIsOptional false startPlugins) ++ (setIsOptional true optPlugins);
   
-  extraBinPath = with pkgs; [ xclip wl-clipboard ];
+  extraBinPath = with pkgs; [ xclip wl-clipboard ripgrep ];
 
   initLua =
     # lua

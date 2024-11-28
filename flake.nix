@@ -88,5 +88,10 @@
       url = "github:OXY2DEV/markview.nvim";
       flake = false;
     };
+
+    telescope = {
+      url = "github:nvim-telescope/telescope.nvim";
+      flake = false;
+    };
   };
 }

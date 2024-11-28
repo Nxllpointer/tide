@@ -5,7 +5,11 @@ local M = {}
 -- General keybinds
 function M.other()
   return {
-    { "<leader><tab>", vim.cmd.Neotree, desc = "Open File Tree" }
+    { "<leader><tab>", vim.cmd.Neotree, desc = "Open File Tree" },
+    { "<leader><leader>", function() vim.cmd.Telescope("find_files") end, desc = "Open File Finder" },
+    { "<leader>b", function() vim.cmd.Telescope("buffers") end, desc = "List Buffers" },
+    { "<leader>g", function() vim.cmd.Telescope("live_grep") end, desc = "Grep Working Directory" },
+    { "<leader>r", function() vim.cmd.Telescope("resume") end, desc = "Resume Telescope" }
   }
 end
 
