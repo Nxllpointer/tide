@@ -93,5 +93,10 @@
       url = "github:nvim-telescope/telescope.nvim?ref=0.1.x";
       flake = false;
     };
+
+    autopairs = {
+      url = "github:windwp/nvim-autopairs";
+      flake = false;
+    };
   };
 }

@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "autopairs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731803843,
+        "narHash": "sha256-LbaxiU3ienVBcMKrug3Coppc4R+MD2rjREw7rHQim1w=",
+        "owner": "windwp",
+        "repo": "nvim-autopairs",
+        "rev": "b464658e9b880f463b9f7e6ccddd93fb0013f559",
+        "type": "github"
+      },
+      "original": {
+        "owner": "windwp",
+        "repo": "nvim-autopairs",
+        "type": "github"
+      }
+    },
     "blink-cmp": {
       "inputs": {
         "fenix": "fenix",
@@ -369,6 +385,7 @@
     },
     "root": {
       "inputs": {
+        "autopairs": "autopairs",
         "blink-cmp": "blink-cmp",
         "catppuccin": "catppuccin",
         "flake-utils": "flake-utils",

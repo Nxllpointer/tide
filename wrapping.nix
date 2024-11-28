@@ -55,6 +55,10 @@ inputs: pkgs: let
       name = "telescope";
       src = inputs.telescope;
     }
+    {
+      name = "nvim-autopairs";
+      src = inputs.autopairs;
+    }
   ];
 
   setIsOptional = isOptional: plugins:

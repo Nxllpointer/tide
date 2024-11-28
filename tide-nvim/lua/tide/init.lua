@@ -14,6 +14,7 @@ require("tide.neotree")
 require("tide.lualine")
 require("tide.rnote")
 require("tide.telescope")
+require("tide.autopairs")
 
 vim.o.clipboard = "unnamedplus"
 vim.o.scrolloff = 5
