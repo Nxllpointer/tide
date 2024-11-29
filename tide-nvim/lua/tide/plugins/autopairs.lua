@@ -1,4 +1,4 @@
-lze.load {
+return {
   "nvim-autopairs",
   event = "InsertEnter",
   after = function()

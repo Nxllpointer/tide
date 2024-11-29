@@ -1,4 +1,4 @@
-lze.load {
+return {
   "which-key",
   event = "DeferredUIEnter",
   on_require = "which-key",

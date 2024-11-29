@@ -1,4 +1,4 @@
-lze.load {
+return {
   "neo-tree",
   cmd = "Neotree",
   on_require = "neo-tree",

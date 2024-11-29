@@ -1,4 +1,4 @@
-lze.load {
+return {
   "blink-cmp",
   dep_of = "lspconfig",
   after = function()

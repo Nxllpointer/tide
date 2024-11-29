@@ -1,4 +1,4 @@
-lze.load {
+return {
   "catppuccin",
   colorscheme = {
     "catppuccin",

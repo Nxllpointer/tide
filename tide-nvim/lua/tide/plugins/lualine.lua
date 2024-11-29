@@ -1,7 +1,4 @@
-vim.o.showtabline = 0
-vim.o.showmode = false
-
-lze.load {
+return {
   "lualine",
   event = "DeferredUIEnter",
   after = function()

@@ -1,4 +1,4 @@
-lze.load {
+return {
   {
     "plenary",
     on_require = "plenary"

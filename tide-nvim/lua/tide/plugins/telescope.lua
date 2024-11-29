@@ -1,4 +1,4 @@
-lze.load {
+return {
   "telescope",
   event = "DeferredUIEnter",
   after = function()

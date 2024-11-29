@@ -1,4 +1,4 @@
-lze.load {
+return {
   "lspconfig",
   ft = {"typst"},
   after = function()

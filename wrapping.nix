@@ -8,12 +8,12 @@ inputs: pkgs: let
       name = "tide";
       src = ./tide-nvim;
     }
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins (
-      plugins: with plugins; [ typst markdown markdown_inline html ]
-    ))
   ];
 
   optPlugins = [
+    (pkgs.vimPlugins.nvim-treesitter.withPlugins (
+      plugins: with plugins; [ typst markdown markdown_inline html ]
+    ))
     {
       name = "catppuccin";
       src = inputs.catppuccin;
