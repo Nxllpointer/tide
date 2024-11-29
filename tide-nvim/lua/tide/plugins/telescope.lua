@@ -1,6 +1,6 @@
 return {
   "telescope",
-  event = "DeferredUIEnter",
+  cmd = "Telescope",
   after = function()
     require('telescope').setup {}
   end

@@ -1,6 +1,6 @@
 return {
   "lspconfig",
-  ft = {"typst"},
+  ft = { "typst" },
   after = function()
     local lspconfig = require("lspconfig")
 
