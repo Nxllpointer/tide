@@ -1,6 +1,7 @@
 return {
   "blink-cmp",
   event = "LspAttach",
+  on_require = "blink.cmp",
   after = function()
     require("blink.cmp").setup {
       keymap = require("tide.mappings").blink(),
