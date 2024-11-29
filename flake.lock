@@ -247,6 +247,23 @@
         "type": "github"
       }
     },
+    "neovim-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732888740,
+        "narHash": "sha256-7IQta0SXbNeML8Bi+CSyIvyTes672tGRPca8pk6E7ec=",
+        "owner": "Nxllpointer",
+        "repo": "neovim",
+        "rev": "4d9f98b97d3632883c0e4cf694d7e07f31deb5dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Nxllpointer",
+        "ref": "rtp-no-xdg-0.10",
+        "repo": "neovim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1731245184,
@@ -394,6 +411,7 @@
         "markview": "markview",
         "mnw": "mnw",
         "neo-tree": "neo-tree",
+        "neovim-src": "neovim-src",
         "nixpkgs": "nixpkgs_2",
         "nui": "nui",
         "nvim-lspconfig": "nvim-lspconfig",

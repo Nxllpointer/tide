@@ -78,6 +78,10 @@ in {
   withPython3 = false;
   withRuby = false;
 
+  neovim = pkgs.neovim-unwrapped.overrideAttrs {
+    src = inputs.neovim-src;
+  };
+
   plugins = (setIsOptional false startPlugins) ++ (setIsOptional true optPlugins);
   
   extraBinPath = with pkgs; [ xclip wl-clipboard ripgrep ];

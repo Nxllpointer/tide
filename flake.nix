@@ -40,6 +40,11 @@
 
     tinymist-rnote.url = "github:Nxllpointer/tinymist?ref=rnote";
 
+    neovim-src = {
+      url = "github:Nxllpointer/neovim/rtp-no-xdg-0.10";
+      flake = false;
+    };
+
     lze = {
       url = "github:BirdeeHub/lze";
       flake = false;
