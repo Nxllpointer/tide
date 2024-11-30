@@ -85,6 +85,10 @@ function M.open(root_dir)
         end
 
         local note_directory = plenary.path:new(vim.fs.dirname(vim.api.nvim_buf_get_name(buffer)))
+        if not note_directory:exists() then
+          vim.notify("Unable to find note directory", vim.log.levels.WARN)
+          return
+        end
 
         local filepath = note_directory:joinpath(relative_file_path)
         filepath:parent():mkdir()
