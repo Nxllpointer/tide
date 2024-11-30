@@ -45,9 +45,11 @@ A complete and up-to-date list of keybindings can be found in the [mappings.lua]
 {
   "typst_template_dir": "required<string>",
   "rnote_template_file": "required<string>",
+  "resources_subdir": "optional<string | null>",
 }
 ```
 > All paths are relative to the tideproject.json file!
 
 `typst_template_dir`: Path of the directory to copy for new typst notes \
-`rnote_template_file`: Path of the file to copy for new Rnote documents
+`rnote_template_file`: Path of the file to copy for new Rnote documents \
+`resources_subdir`: Subdirectory in the note directory to put resources (like Rnote documents) in. Defaults to `resources`

@@ -14,10 +14,12 @@ function load_config(root_dir)
 
   local typst_template_dir = config.typst_template_dir
   local rnote_template_file = config.rnote_template_file
+  local resources_subdir = config.resources_subdir or "resources"
 
   vim.validate {
     typst_template_dir = { typst_template_dir, "string" },
-    rnote_template_file = { rnote_template_file, "string" }
+    rnote_template_file = { rnote_template_file, "string" },
+    resources_subdir = { resources_subdir, function(val) return type(val) == "string" or val == vim.NIL end, "string or null" }
   }
 
   typst_template_dir = vim.fs.joinpath(root_dir, typst_template_dir)
@@ -32,7 +34,8 @@ function load_config(root_dir)
   
   return {
     typst_template_dir = typst_template_dir,
-    rnote_template_file = rnote_template_file
+    rnote_template_file = rnote_template_file,
+    resources_subdir = resources_subdir
   }
 end
 
@@ -75,10 +78,16 @@ function M.open(root_dir)
           vim.notify("Aborted creation of Rnote document")
           return
         end
-        
-        local base_name = name .. ".rnote"
-        local directory = plenary.path:new(vim.fs.dirname(vim.api.nvim_buf_get_name(buffer)))
-        local filepath = directory:joinpath(base_name)
+
+        local relative_file_path = plenary.path:new(name .. ".rnote")
+        if self.config.resources_subdir ~= vim.NIL then
+          relative_file_path = plenary.path:new(self.config.resources_subdir):joinpath(relative_file_path)
+        end
+
+        local note_directory = plenary.path:new(vim.fs.dirname(vim.api.nvim_buf_get_name(buffer)))
+
+        local filepath = note_directory:joinpath(relative_file_path)
+        filepath:parent():mkdir()
 
         if filepath:exists() then
           vim.notify("File exists already", vim.log.levels.WARN)
@@ -87,8 +96,8 @@ function M.open(root_dir)
 
         local template_path = plenary.path:new(self.config.rnote_template_file)
         template_path:copy({ destination = filepath })
-        
-        insert_line(buffer, cursor, [[#image("]] .. base_name .. [[")]])
+
+        insert_line(buffer, cursor, [[#image("]] .. relative_file_path .. [[")]])
 
         require("tide.rnote").open(tostring(filepath))
         require("neo-tree.sources.manager").refresh("filesystem")
