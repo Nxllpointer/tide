@@ -8,7 +8,7 @@ return {
       cmd = { NIX_VALUES.tinymist_path };
 
       root_dir = function(filepath)
-        tideproject = require("tide.tideproject").current()
+        local tideproject = require("tide.tideproject").current()
         return (tideproject and tideproject.root)
       end,
 
@@ -19,7 +19,7 @@ return {
       capabilities = require('blink.cmp').get_lsp_capabilities({}, true),
 
       on_attach = function(client, buffer)
-        preview = require("tide.preview")
+        local preview = require("tide.preview")
         preview.create_autocmds(buffer)
         require("which-key").add(require("tide.mappings").preview(buffer))
       end

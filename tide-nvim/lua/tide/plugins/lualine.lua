@@ -30,7 +30,7 @@ return {
         lualine_y = {},
         lualine_z = {}
       },
-      extensions = { 
+      extensions = {
         {
           filetypes = { "neo-tree" },
           winbar = {

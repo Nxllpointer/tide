@@ -6,7 +6,7 @@ function M.root_detector(filepath)
   return vim.fs.root(filepath, { CONFIG_NAME })
 end
 
-function load_config(root_dir)
+local function load_config(root_dir)
   local config_file = io.open(vim.fs.joinpath(root_dir, CONFIG_NAME))
   local config_content = config_file:read("*all")
   local config = vim.json.decode(config_content)
@@ -31,7 +31,7 @@ function load_config(root_dir)
   if vim.fn.filereadable(rnote_template_file) == 0 then
     error("Invalid rnote template file: " .. rnote_template_file)
   end
-  
+
   return {
     typst_template_dir = typst_template_dir,
     rnote_template_file = rnote_template_file,

@@ -7,7 +7,6 @@ return {
     local utils = require("neo-tree.utils")
     local fs = require("neo-tree.sources.filesystem")
     local fs_actions = require("neo-tree.sources.filesystem.lib.fs_actions")
-    local node_expander = require("neo-tree.sources.common.node_expander")
 
     require("neo-tree").setup {
       filesystem = {
@@ -30,7 +29,7 @@ return {
               return
             end
 
-            tideproject = require("tide.tideproject").current()
+            local tideproject = require("tide.tideproject").current()
             if tideproject == nil then
               return
             end

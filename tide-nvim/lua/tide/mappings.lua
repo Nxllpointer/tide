@@ -47,9 +47,9 @@ function M.typst(buffer)
   return {
     mode = "n",
     buffer = buffer,
-    { 
+    {
       "<leader>n",
-      function() 
+      function()
         local tideproject = require("tide.tideproject").current()
         if tideproject ~= nil then
           tideproject:new_rnote_doc()
@@ -65,13 +65,13 @@ end
 function M.blink()
   return {
     preset = "enter", -- See https://github.com/Saghen/blink.cmp/blob/4cc0e2bc27fc5ff67f846808e42d3046e05c2f11/lua/blink/cmp/keymap.lua#L47
-    ['<C-space>'] = { 
+    ['<C-space>'] = {
       'show',
       require("blink.cmp.trigger.signature").show,
       'show_documentation', 'hide_documentation'
     },
-    ['<C-e>'] = { 
-      vim.schedule_wrap(require("blink.cmp.trigger.signature").hide), 
+    ['<C-e>'] = {
+      vim.schedule_wrap(require("blink.cmp.trigger.signature").hide),
       'hide'
     },
   }
