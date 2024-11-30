@@ -106,5 +106,10 @@
       url = "github:windwp/nvim-autopairs";
       flake = false;
     };
+
+    gitsigns = {
+      url = "github:lewis6991/gitsigns.nvim";
+      flake = false;
+    };
   };
 }

@@ -59,6 +59,10 @@ inputs: pkgs: let
       name = "nvim-autopairs";
       src = inputs.autopairs;
     }
+    {
+      name = "gitsigns";
+      src = inputs.gitsigns;
+    }
   ];
 
   setIsOptional = isOptional: plugins:

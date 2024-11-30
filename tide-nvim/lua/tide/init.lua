@@ -11,6 +11,7 @@ lze.load {
   { import = "tide.plugins.blink" },
   { import = "tide.plugins.catppuccin" },
   { import = "tide.plugins.devicons" },
+  { import = "tide.plugins.gitsigns" },
   { import = "tide.plugins.lspconfig" },
   { import = "tide.plugins.lualine" },
   { import = "tide.plugins.markview" },

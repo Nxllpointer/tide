@@ -8,7 +8,7 @@ return {
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch", "diff" },
+        lualine_b = { "b:gitsigns_status_dict.head", "b:gitsigns_status" },
         lualine_c = {},
         lualine_x = { "searchcount", "selectioncount" },
         lualine_y = { { "tabs", show_modified_status = false } },

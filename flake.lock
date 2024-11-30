@@ -168,6 +168,22 @@
         "type": "github"
       }
     },
+    "gitsigns": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732361574,
+        "narHash": "sha256-H7A+AxioiedSuC+jqRwP4c7DjZR/0j4o/fTUasT2urc=",
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "rev": "5f808b5e4fef30bd8aca1b803b4e555da07fc412",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "type": "github"
+      }
+    },
     "lualine": {
       "flake": false,
       "locked": {
@@ -406,6 +422,7 @@
         "blink-cmp": "blink-cmp",
         "catppuccin": "catppuccin",
         "flake-utils": "flake-utils",
+        "gitsigns": "gitsigns",
         "lualine": "lualine",
         "lze": "lze",
         "markview": "markview",
