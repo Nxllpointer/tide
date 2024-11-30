@@ -1,3 +1,5 @@
+local Path = require("plenary").path
+
 local M = {}
 
 local CONFIG_NAME = "tideproject.json"
@@ -7,7 +9,8 @@ function M.root_detector(filepath)
 end
 
 local function load_config(root_dir)
-  local config_file = io.open(vim.fs.joinpath(root_dir, CONFIG_NAME))
+  root_dir = Path:new(root_dir)
+  local config_file = io.open(tostring(root_dir:joinpath(CONFIG_NAME):absolute()))
   local config_content = config_file:read("*all")
   local config = vim.json.decode(config_content)
   config_file:close()
@@ -22,19 +25,19 @@ local function load_config(root_dir)
     resources_subdir = { resources_subdir, function(val) return type(val) == "string" or val == vim.NIL end, "string or null" }
   }
 
-  typst_template_dir = vim.fs.joinpath(root_dir, typst_template_dir)
-  rnote_template_file = vim.fs.joinpath(root_dir, rnote_template_file)
+  typst_template_dir = root_dir:joinpath(typst_template_dir)
+  rnote_template_file = root_dir:joinpath(rnote_template_file)
 
-  if vim.fn.isdirectory(typst_template_dir) == 0 then
+  if typst_template_dir:is_dir() == 0 then
     error("Invalid typst template directory: " .. typst_template_dir)
   end
-  if vim.fn.filereadable(rnote_template_file) == 0 then
+  if rnote_template_file:is_file() == 0 then
     error("Invalid rnote template file: " .. rnote_template_file)
   end
 
   return {
-    typst_template_dir = typst_template_dir,
-    rnote_template_file = rnote_template_file,
+    typst_template_dir = tostring(typst_template_dir),
+    rnote_template_file = tostring(rnote_template_file),
     resources_subdir = resources_subdir
   }
 end
@@ -66,7 +69,6 @@ function M.open(root_dir)
   }
 
   function P:new_rnote_doc()
-    local plenary = require("plenary")
     local window = vim.api.nvim_get_current_win()
     local buffer = vim.api.nvim_win_get_buf(window)
     local cursor = vim.api.nvim_win_get_cursor(window)
@@ -79,12 +81,12 @@ function M.open(root_dir)
           return
         end
 
-        local relative_file_path = plenary.path:new(name .. ".rnote")
+        local relative_file_path = Path:new(name .. ".rnote")
         if self.config.resources_subdir ~= vim.NIL then
-          relative_file_path = plenary.path:new(self.config.resources_subdir):joinpath(relative_file_path)
+          relative_file_path = Path:new(self.config.resources_subdir):joinpath(relative_file_path)
         end
 
-        local note_directory = plenary.path:new(vim.fs.dirname(vim.api.nvim_buf_get_name(buffer)))
+        local note_directory = Path:new(vim.fs.dirname(vim.api.nvim_buf_get_name(buffer)))
         if not note_directory:exists() then
           vim.notify("Unable to find note directory", vim.log.levels.WARN)
           return
@@ -98,7 +100,7 @@ function M.open(root_dir)
           return
         end
 
-        local template_path = plenary.path:new(self.config.rnote_template_file)
+        local template_path = Path:new(self.config.rnote_template_file)
         template_path:copy({ destination = filepath })
 
         insert_line(buffer, cursor, [[#image("]] .. relative_file_path .. [[")]])
@@ -118,8 +120,8 @@ end
 
 function M.status_item()
   local function load_config_safe()
-    local root = vim.fn.getcwd()
-    if vim.fn.filereadable(vim.fs.joinpath(root, CONFIG_NAME)) ~= 0 then
+    local root = Path:new(vim.fn.getcwd())
+    if root:joinpath(CONFIG_NAME):is_file() ~= 0 then
       local status, result = pcall(load_config, root)
       return status, result
     else
