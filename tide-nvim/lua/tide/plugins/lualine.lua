@@ -12,7 +12,7 @@ return {
         lualine_c = {},
         lualine_x = { "searchcount", "selectioncount" },
         lualine_y = { { "tabs", show_modified_status = false } },
-        lualine_z = { 'require("tide.tideproject").status_item()' }
+        lualine_z = { require("tide.tideproject").status_item() }
       },
       winbar = {
         lualine_a = { { 'filename', path = 1 } },

@@ -113,22 +113,40 @@ function M.current()
 end
 
 function M.status_item()
-  local status
-
-  local root = vim.fn.getcwd()
-  if vim.fn.filereadable(vim.fs.joinpath(root, CONFIG_NAME)) ~= 0 then
-    local config_status = pcall(load_config, root)
-
-    if config_status then
-      status = "Active"
+  local function load_config_safe()
+    local root = vim.fn.getcwd()
+    if vim.fn.filereadable(vim.fs.joinpath(root, CONFIG_NAME)) ~= 0 then
+      local status, result = pcall(load_config, root)
+      return status, result
     else
-      status = "Config error"
+      return nil, nil
     end
-  else
-    status = "Not found"
   end
-  
-  return "Tideproject: " .. status
+
+  return {
+    function()
+      local config_status = load_config_safe()
+
+      local msg
+      if config_status ~= nil then
+        if config_status == true then
+          msg = "Active"
+        else
+          msg = "Config error (Click)"
+        end
+      else
+        msg = "Not found"
+      end
+
+      return "Tideproject: " .. msg
+    end,
+    on_click = function()
+      local config_status, result = load_config_safe()
+      if config_status ~= nil then
+        vim.notify(vim.inspect(result))
+      end
+    end
+  }
 end
 
 return M
