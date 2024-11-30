@@ -521,11 +521,11 @@
         "typst": "typst"
       },
       "locked": {
-        "lastModified": 1732046949,
-        "narHash": "sha256-JO+BJS2pNoEz8ZBB+kesNYPuhE3If0vfEchfkb6oCr8=",
+        "lastModified": 1732976411,
+        "narHash": "sha256-LKZeBRydT7GOAn8t9APg3EDTpI/zSbNlo1DKfolVhQM=",
         "owner": "Nxllpointer",
         "repo": "tinymist",
-        "rev": "1b9d407d50ea255e30f7204c9b2744d19cc4c3f1",
+        "rev": "365060d74f2d405ee97b877e18b2cb19081cdc65",
         "type": "github"
       },
       "original": {
