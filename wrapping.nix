@@ -74,7 +74,7 @@ inputs: pkgs: let
     )
     plugins;
 in {
-  appName = "tide";
+  appName = "tide-ext";
   desktopEntry = false;
 
   withNodeJs = false;
