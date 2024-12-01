@@ -1,6 +1,6 @@
 return {
   "lspconfig",
-  ft = { "typst" },
+  ft = { "typst", "lua" },
   after = function()
     local lspconfig = require("lspconfig")
 
@@ -24,5 +24,7 @@ return {
         require("which-key").add(require("tide.mappings").preview(buffer))
       end
     }
+
+    lspconfig.lua_ls.setup {}
   end
 }

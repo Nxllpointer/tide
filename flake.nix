@@ -111,5 +111,10 @@
       url = "github:lewis6991/gitsigns.nvim";
       flake = false;
     };
+
+    lazydev = {
+      url = "github:folke/lazydev.nvim";
+      flake = false;
+    };
   };
 }

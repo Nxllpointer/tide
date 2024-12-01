@@ -184,6 +184,22 @@
         "type": "github"
       }
     },
+    "lazydev": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732489623,
+        "narHash": "sha256-ErX0dCyAVRn5wtlXVnbEYku2dicIkFySdlsqg5vrWoA=",
+        "owner": "folke",
+        "repo": "lazydev.nvim",
+        "rev": "f59bd14a852ca43db38e3662395354cb2a9b13e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "lazydev.nvim",
+        "type": "github"
+      }
+    },
     "lualine": {
       "flake": false,
       "locked": {
@@ -423,6 +439,7 @@
         "catppuccin": "catppuccin",
         "flake-utils": "flake-utils",
         "gitsigns": "gitsigns",
+        "lazydev": "lazydev",
         "lualine": "lualine",
         "lze": "lze",
         "markview": "markview",

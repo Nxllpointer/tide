@@ -12,7 +12,7 @@ inputs: pkgs: let
 
   optPlugins = [
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (
-      plugins: with plugins; [ typst markdown markdown_inline html ]
+      plugins: with plugins; [ typst lua markdown markdown_inline html ]
     ))
     {
       name = "catppuccin";
@@ -63,6 +63,10 @@ inputs: pkgs: let
       name = "gitsigns";
       src = inputs.gitsigns;
     }
+    {
+      name = "lazydev";
+      src = inputs.lazydev;
+    }
   ];
 
   setIsOptional = isOptional: plugins:
@@ -88,7 +92,12 @@ in {
 
   plugins = (setIsOptional false startPlugins) ++ (setIsOptional true optPlugins);
   
-  extraBinPath = with pkgs; [ xclip wl-clipboard ripgrep ];
+  extraBinPath = with pkgs; [ 
+    xclip
+    wl-clipboard
+    ripgrep
+    lua-language-server
+  ];
 
   initLua =
     # lua
