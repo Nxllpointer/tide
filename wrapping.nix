@@ -64,6 +64,10 @@ inputs: pkgs: let
       src = inputs.gitsigns;
     }
     {
+      name = "auto-save";
+      src = inputs.autosave;
+    }
+    {
       name = "lazydev";
       src = inputs.lazydev;
     }

@@ -112,6 +112,11 @@
       flake = false;
     };
 
+    autosave = {
+      url = "github:okuuva/auto-save.nvim";
+      flake = false;
+    };
+
     lazydev = {
       url = "github:folke/lazydev.nvim";
       flake = false;

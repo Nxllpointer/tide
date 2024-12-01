@@ -8,6 +8,7 @@ require("tide.rnote")
 lze.load {
   { import = "tide.plugins.dependencies" },
   { import = "tide.plugins.autopairs" },
+  { import = "tide.plugins.autosave" },
   { import = "tide.plugins.blink" },
   { import = "tide.plugins.catppuccin" },
   { import = "tide.plugins.devicons" },

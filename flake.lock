@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "autosave": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1728590199,
+        "narHash": "sha256-NN03WnGyb6IOomNW6ZdoHR1apnOxTnGGl/zRd24Kl9k=",
+        "owner": "okuuva",
+        "repo": "auto-save.nvim",
+        "rev": "5fbcaac0a2698c87a9a1bd2083cb6949505cca12",
+        "type": "github"
+      },
+      "original": {
+        "owner": "okuuva",
+        "repo": "auto-save.nvim",
+        "type": "github"
+      }
+    },
     "blink-cmp": {
       "inputs": {
         "fenix": "fenix",
@@ -435,6 +451,7 @@
     "root": {
       "inputs": {
         "autopairs": "autopairs",
+        "autosave": "autosave",
         "blink-cmp": "blink-cmp",
         "catppuccin": "catppuccin",
         "flake-utils": "flake-utils",
