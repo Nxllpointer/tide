@@ -56,6 +56,8 @@ function M.typst(buffer)
         local tideproject = require("tide.tideproject").current()
         if tideproject ~= nil then
           tideproject:new_rnote_doc()
+        else
+          vim.notify("No tideproject active")
         end
       end,
       desc = "New Rnote Document"

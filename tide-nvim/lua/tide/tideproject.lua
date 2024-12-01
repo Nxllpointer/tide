@@ -11,6 +11,10 @@ end
 local function load_config(root_dir)
   root_dir = Path:new(root_dir)
   local config_file = io.open(tostring(root_dir:joinpath(CONFIG_NAME):absolute()))
+  if config_file == nil then
+    return nil
+  end
+
   local config_content = config_file:read("*all")
   local config = vim.json.decode(config_content)
   config_file:close()
@@ -58,8 +62,7 @@ end
 function M.open(root_dir)
   local config_status, config_result = pcall(load_config, root_dir)
 
-  if config_status == false then
-    vim.notify("Unable to load " .. CONFIG_NAME .. " -> " .. config_result, vim.log.levels.WARN)
+  if config_status == false or config_result == nil then
     return nil
   end
 
@@ -121,7 +124,7 @@ end
 function M.status_item()
   local function load_config_safe()
     local root = Path:new(vim.fn.getcwd())
-    if root:joinpath(CONFIG_NAME):is_file() ~= 0 then
+    if root:joinpath(CONFIG_NAME):is_file() then
       local status, result = pcall(load_config, root)
       return status, result
     else
