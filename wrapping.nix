@@ -102,6 +102,7 @@ in {
     ripgrep
     lua-language-server
     nil
+    basedpyright
   ];
 
   initLua =
