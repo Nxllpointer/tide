@@ -12,7 +12,7 @@ inputs: pkgs: let
 
   optPlugins = [
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (
-      plugins: with plugins; [ typst lua markdown markdown_inline html ]
+      plugins: with plugins; [ typst lua nix markdown markdown_inline html ]
     ))
     {
       name = "catppuccin";
@@ -101,6 +101,7 @@ in {
     wl-clipboard
     ripgrep
     lua-language-server
+    nil
   ];
 
   initLua =

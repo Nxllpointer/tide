@@ -1,10 +1,16 @@
 return {
   "lspconfig",
-  ft = { "typst", "lua" },
+  ft = { "typst", "lua", "nix" },
   after = function()
     local lspconfig = require("lspconfig")
 
-    lspconfig.tinymist.setup {
+    local function setup(server, config)
+      config = config or {}
+      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities or {}, true)
+      server.setup(config)
+    end
+
+    setup(lspconfig.tinymist, {
       cmd = { NIX_VALUES.tinymist_path };
 
       root_dir = function(filepath)
@@ -23,8 +29,9 @@ return {
         preview.create_autocmds(buffer)
         require("which-key").add(require("tide.mappings").preview(buffer))
       end
-    }
+    })
 
-    lspconfig.lua_ls.setup {}
+    setup(lspconfig.lua_ls)
+    setup(lspconfig.nil_ls)
   end
 }
