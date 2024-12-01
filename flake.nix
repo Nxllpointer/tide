@@ -111,5 +111,10 @@
       url = "github:lewis6991/gitsigns.nvim";
       flake = false;
     };
+    
+    autosave = {
+      url = "github:okuuva/auto-save.nvim";
+      flake = false;
+    };
   };
 }

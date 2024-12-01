@@ -63,6 +63,10 @@ inputs: pkgs: let
       name = "gitsigns";
       src = inputs.gitsigns;
     }
+    {
+      name = "auto-save";
+      src = inputs.autosave;
+    }
   ];
 
   setIsOptional = isOptional: plugins:
