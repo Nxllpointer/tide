@@ -1,6 +1,6 @@
 return {
   "lspconfig",
-  ft = { "typst", "lua", "nix", "python" },
+  ft = { "typst", "lua", "nix", "python", "r" },
   after = function()
     local lspconfig = require("lspconfig")
 
@@ -34,5 +34,6 @@ return {
     setup(lspconfig.lua_ls)
     setup(lspconfig.nil_ls)
     setup(lspconfig.basedpyright)
+    setup(lspconfig.r_language_server)
   end
 }

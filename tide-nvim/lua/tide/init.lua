@@ -18,6 +18,7 @@ lze.load {
   { import = "tide.plugins.lualine" },
   { import = "tide.plugins.markview" },
   { import = "tide.plugins.neotree" },
+  { import = "tide.plugins.r-nvim" },
   { import = "tide.plugins.telescope" },
   { import = "tide.plugins.treesitter" },
   { import = "tide.plugins.which-key" },

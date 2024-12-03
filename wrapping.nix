@@ -12,7 +12,17 @@ inputs: pkgs: let
 
   optPlugins = [
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (
-      plugins: with plugins; [ typst lua nix markdown markdown_inline html ]
+      plugins: with plugins; [ 
+        typst
+        lua
+        nix
+        r
+        rnoweb
+        markdown
+        markdown_inline
+        html
+        yaml
+      ]
     ))
     {
       name = "catppuccin";
@@ -70,6 +80,10 @@ inputs: pkgs: let
     {
       name = "lazydev";
       src = inputs.lazydev;
+    }
+    {
+      name = "r-nvim";
+      src = inputs.r-nvim;
     }
   ];
 

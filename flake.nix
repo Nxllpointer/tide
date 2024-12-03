@@ -121,5 +121,10 @@
       url = "github:folke/lazydev.nvim";
       flake = false;
     };
+
+    r-nvim = {
+      url = "github:R-nvim/R.nvim/v0.1.0";
+      flake = false;
+    };
   };
 }

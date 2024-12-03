@@ -448,6 +448,23 @@
         "type": "github"
       }
     },
+    "r-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1728049535,
+        "narHash": "sha256-TMcnmMkMsB0lNAAcVAC1751pnV44xz2BCMLGcMbs8Xs=",
+        "owner": "R-nvim",
+        "repo": "R.nvim",
+        "rev": "e1655b5616dff71edae0f52a651afc8d7433037c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "R-nvim",
+        "ref": "v0.1.0",
+        "repo": "R.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "autopairs": "autopairs",
@@ -468,6 +485,7 @@
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-web-devicons": "nvim-web-devicons",
         "plenary": "plenary",
+        "r-nvim": "r-nvim",
         "systems": "systems",
         "telescope": "telescope",
         "tinymist-rnote": "tinymist-rnote",
