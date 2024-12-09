@@ -18,6 +18,8 @@ inputs: pkgs: let
         nix
         r
         rnoweb
+        java
+        groovy
         markdown
         markdown_inline
         html
@@ -117,6 +119,7 @@ in {
     lua-language-server
     nil
     basedpyright
+    jdt-language-server
   ];
 
   initLua =
