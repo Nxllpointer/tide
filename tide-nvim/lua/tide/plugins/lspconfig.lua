@@ -1,6 +1,6 @@
 return {
   "lspconfig",
-  ft = { "typst", "lua", "nix", "python", "r", "java", "groovy" },
+  ft = { "typst", "lua", "nix", "python", "r", "java", "groovy", "rust" },
   after = function()
     local lspconfig = require("lspconfig")
 
@@ -36,5 +36,6 @@ return {
     setup(lspconfig.basedpyright)
     setup(lspconfig.r_language_server)
     setup(lspconfig.jdtls)
+    setup(lspconfig.rust_analyzer)
   end
 }

@@ -20,6 +20,7 @@ inputs: pkgs: let
         rnoweb
         java
         groovy
+        rust
         markdown
         markdown_inline
         html
