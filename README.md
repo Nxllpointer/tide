@@ -4,8 +4,7 @@ Can't choose between text-based ⌨️ or handwritten 📝 notes? \
 Tide has got you covered! Don't compromise - do both!
 
 ## Showcase
-https://github.com/user-attachments/assets/190de0b5-ae3d-4cfd-8b33-4a41098b0d0b
-
+https://github.com/user-attachments/assets/303d4074-4846-41b9-9cdd-e7ea871fa4ab
 
 ## How does it work?
 Tide is a [neovim](https://neovim.io/) configuration specifically crafted for notetaking,
