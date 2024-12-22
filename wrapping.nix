@@ -88,6 +88,10 @@ inputs: pkgs: let
       name = "r-nvim";
       src = inputs.r-nvim;
     }
+    {
+      name = "fidget";
+      src = inputs.fidget;
+    }
   ];
 
   setIsOptional = isOptional: plugins:

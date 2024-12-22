@@ -126,5 +126,10 @@
       url = "github:R-nvim/R.nvim/v0.1.0";
       flake = false;
     };
+
+    fidget = {
+      url = "github:j-hui/fidget.nvim";
+      flake = false;
+    };
   };
 }

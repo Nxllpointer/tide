@@ -128,6 +128,22 @@
         "type": "github"
       }
     },
+    "fidget": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734334336,
+        "narHash": "sha256-o0za2NxFtzHZa7PRIm9U/P1/fwJrxS1G79ukdGLhJ4Q=",
+        "owner": "j-hui",
+        "repo": "fidget.nvim",
+        "rev": "9238947645ce17d96f30842e61ba81147185b657",
+        "type": "github"
+      },
+      "original": {
+        "owner": "j-hui",
+        "repo": "fidget.nvim",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -471,6 +487,7 @@
         "autosave": "autosave",
         "blink-cmp": "blink-cmp",
         "catppuccin": "catppuccin",
+        "fidget": "fidget",
         "flake-utils": "flake-utils",
         "gitsigns": "gitsigns",
         "lazydev": "lazydev",
