@@ -1,6 +1,6 @@
 return {
   "blink-cmp",
-  event = "LspAttach",
+  event = { "LspAttach", "CmdlineEnter" },
   on_require = "blink.cmp",
   after = function()
     require("blink.cmp").setup {
@@ -16,7 +16,7 @@ return {
 
       completion = {
         list = {
-          selection = "preselect";
+          selection = "manual";
         }
       }
     }
