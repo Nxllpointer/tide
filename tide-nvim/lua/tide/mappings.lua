@@ -72,11 +72,11 @@ function M.blink()
     preset = "enter", -- See https://github.com/Saghen/blink.cmp/blob/4cc0e2bc27fc5ff67f846808e42d3046e05c2f11/lua/blink/cmp/keymap.lua#L47
     ['<C-space>'] = {
       'show',
-      require("blink.cmp.trigger.signature").show,
+      require("blink.cmp.signature.trigger").show,
       'show_documentation', 'hide_documentation'
     },
     ['<C-e>'] = {
-      vim.schedule_wrap(require("blink.cmp.trigger.signature").hide),
+      vim.schedule_wrap(require("blink.cmp.signature.trigger").hide),
       'hide'
     },
   }
