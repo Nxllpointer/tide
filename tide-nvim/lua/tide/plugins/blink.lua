@@ -16,7 +16,7 @@ return {
 
       completion = {
         list = {
-          selection = "preselect";
+          selection = "manual";
         }
       }
     }
