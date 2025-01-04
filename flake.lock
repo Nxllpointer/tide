@@ -555,11 +555,11 @@
         "typst": "typst"
       },
       "locked": {
-        "lastModified": 1732976411,
-        "narHash": "sha256-LKZeBRydT7GOAn8t9APg3EDTpI/zSbNlo1DKfolVhQM=",
+        "lastModified": 1735997871,
+        "narHash": "sha256-XqqReqruU99psPm1qLo0fGMeZEn0/0eMCbJL5BppFWM=",
         "owner": "Nxllpointer",
         "repo": "tinymist",
-        "rev": "365060d74f2d405ee97b877e18b2cb19081cdc65",
+        "rev": "8d444ee3c700689e56f1a39bdce27dfbbb5b63aa",
         "type": "github"
       },
       "original": {
