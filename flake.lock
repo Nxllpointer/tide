@@ -219,11 +219,11 @@
     "lazydev": {
       "flake": false,
       "locked": {
-        "lastModified": 1732489623,
-        "narHash": "sha256-ErX0dCyAVRn5wtlXVnbEYku2dicIkFySdlsqg5vrWoA=",
+        "lastModified": 1734714787,
+        "narHash": "sha256-ZaAkGTwEBoOjy6RyIPKFLJswxfOu886bN899UakXAv0=",
         "owner": "folke",
         "repo": "lazydev.nvim",
-        "rev": "f59bd14a852ca43db38e3662395354cb2a9b13e0",
+        "rev": "8620f82ee3f59ff2187647167b6b47387a13a018",
         "type": "github"
       },
       "original": {
