@@ -25,6 +25,7 @@ inputs: pkgs: let
         markdown_inline
         html
         yaml
+        wgsl
       ]
     ))
     {
@@ -125,6 +126,7 @@ in {
     nil
     basedpyright
     jdt-language-server
+    wgsl-analyzer
   ];
 
   initLua =

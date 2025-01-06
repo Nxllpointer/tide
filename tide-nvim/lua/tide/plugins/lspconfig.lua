@@ -1,6 +1,6 @@
 return {
   "lspconfig",
-  ft = { "typst", "lua", "nix", "python", "r", "java", "groovy", "rust" },
+  ft = { "typst", "lua", "nix", "python", "r", "java", "groovy", "rust", "wgsl" },
   after = function()
     local lspconfig = require("lspconfig")
 
@@ -37,5 +37,6 @@ return {
     setup(lspconfig.r_language_server)
     setup(lspconfig.jdtls)
     setup(lspconfig.rust_analyzer)
+    setup(lspconfig.wgsl_analyzer)
   end
 }
