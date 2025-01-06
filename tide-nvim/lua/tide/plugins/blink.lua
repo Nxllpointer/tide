@@ -18,6 +18,10 @@ return {
         list = {
           selection = "manual";
         }
+      },
+
+      sources = {
+        cmdline = {}
       }
     }
   end
