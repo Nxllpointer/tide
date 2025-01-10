@@ -1,15 +1,27 @@
 return {
   "blink-cmp",
-  event = "LspAttach",
+  event = { "LspAttach", "CmdlineEnter" },
   on_require = "blink.cmp",
   after = function()
     require("blink.cmp").setup {
-      keymap = require("tide.mappings").blink(),
-      trigger = { signature_help = { enabled = true } },
-      windows = {
-        autocomplete = {
-          selection = "manual"
+      fuzzy = {
+        prebuilt_binaries = {
+          download = false
         }
+      },
+
+      keymap = require("tide.mappings").blink(),
+
+      signature = { enabled = true },
+
+      completion = {
+        list = {
+          selection = "manual";
+        }
+      },
+
+      sources = {
+        cmdline = {}
       }
     }
   end
