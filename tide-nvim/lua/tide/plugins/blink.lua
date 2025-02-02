@@ -17,6 +17,13 @@ return {
       completion = {
         list = {
           selection = "manual";
+        },
+        accept = {
+          auto_brackets = {
+            semantic_token_resolution = {
+              blocked_filetypes = { "typst" }
+            }
+          }
         }
       },
 
