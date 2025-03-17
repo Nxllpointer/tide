@@ -1,9 +1,9 @@
 local lze = require("lze")
-lze.register_handlers(require('lze.x.on_require'))
 
 require("tide.opts")
 require("tide.lsp")
 require("tide.rnote")
+require("tide.auto-checktime")
 
 lze.load {
   { import = "tide.plugins.dependencies" },

@@ -15,3 +15,5 @@ vim.o.autoindent = true
 
 vim.o.showtabline = 0
 vim.o.showmode = false
+
+vim.o.diffopt = vim.o.diffopt .. ",vertical"

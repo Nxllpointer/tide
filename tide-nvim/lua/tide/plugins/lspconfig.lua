@@ -11,8 +11,6 @@ return {
     end
 
     setup(lspconfig.tinymist, {
-      cmd = { NIX_VALUES.tinymist_path };
-
       root_dir = function(filepath)
         local tideproject = require("tide.tideproject").current()
         return (tideproject and tideproject.root)
