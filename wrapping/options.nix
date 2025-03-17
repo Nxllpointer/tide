@@ -78,6 +78,8 @@
     ];
 
   extraPackages = with pkgs; [
+    tinymist-rnote
+    rnote
     xclip
     wl-clipboard
     ripgrep

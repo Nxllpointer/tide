@@ -5,8 +5,6 @@ return {
     local lspconfig = require("lspconfig")
 
     lspconfig.tinymist.setup {
-      cmd = { NIX_VALUES.tinymist_path };
-
       root_dir = function(filepath)
         local tideproject = require("tide.tideproject").current()
         return (tideproject and tideproject.root)
