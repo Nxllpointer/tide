@@ -6,7 +6,7 @@ return {
     require("blink.cmp").setup {
       fuzzy = {
         prebuilt_binaries = {
-          download = false
+          -- download = false
         }
       },
 
@@ -16,7 +16,9 @@ return {
 
       completion = {
         list = {
-          selection = "manual";
+          selection = {
+            preselect = false
+          };
         },
         accept = {
           auto_brackets = {
@@ -27,8 +29,8 @@ return {
         }
       },
 
-      sources = {
-        cmdline = {}
+      cmdline = {
+        enabled = false
       }
     }
   end
