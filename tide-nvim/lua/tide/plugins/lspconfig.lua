@@ -1,6 +1,6 @@
 return {
   "lspconfig",
-  ft = { "typst", "lua", "nix", "python", "r", "java", "groovy", "rust", "wgsl" },
+  event = "DeferredUIEnter",
   after = function()
     local lspconfig = require("lspconfig")
 
