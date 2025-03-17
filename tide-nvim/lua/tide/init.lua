@@ -3,6 +3,7 @@ local lze = require("lze")
 require("tide.opts")
 require("tide.lsp")
 require("tide.rnote")
+require("tide.auto-checktime")
 
 lze.load {
   { import = "tide.plugins.dependencies" },

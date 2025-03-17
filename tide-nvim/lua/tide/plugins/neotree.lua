@@ -13,6 +13,7 @@ return {
         window = {
           mappings = require("tide.mappings").neotree()
         },
+        use_libuv_file_watcher = true,
         commands = {
           new_typst_note = function(state)
             local node = state.tree:get_node()
