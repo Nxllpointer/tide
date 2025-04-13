@@ -96,6 +96,7 @@
       rust
       yaml
       wgsl
+      nu
     ];
 
   extraPackages = with pkgs; [

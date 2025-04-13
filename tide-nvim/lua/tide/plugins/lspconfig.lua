@@ -36,5 +36,6 @@ return {
     setup(lspconfig.jdtls)
     setup(lspconfig.rust_analyzer)
     setup(lspconfig.wgsl_analyzer)
+    setup(lspconfig.nushell)
   end
 }

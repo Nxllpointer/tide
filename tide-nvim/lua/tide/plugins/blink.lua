@@ -24,6 +24,9 @@ return {
           auto_brackets = {
             semantic_token_resolution = {
               blocked_filetypes = { "typst" }
+            },
+            kind_resolution = {
+              blocked_filetypes = { "nu" }
             }
           }
         }
