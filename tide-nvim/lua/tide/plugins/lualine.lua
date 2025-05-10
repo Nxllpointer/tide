@@ -7,7 +7,14 @@ return {
         globalstatus = true
       },
       sections = {
-        lualine_a = { "mode" },
+        lualine_a = {
+          "mode",
+          {
+            function () return "DEBUG" end,
+            icon = "",
+            cond = require("debugmaster.debug.mode").is_active
+          }
+        },
         lualine_b = { "b:gitsigns_status_dict.head", "b:gitsigns_status" },
         lualine_c = {},
         lualine_x = { "searchcount", "selectioncount" },

@@ -79,6 +79,14 @@
       name = "fidget";
       src = plugins.fidget;
     }
+    {
+      name = "nvim-dap";
+      src = plugins.nvim-dap;
+    }
+    {
+      name = "debugmaster";
+      src = plugins.debugmaster;
+    }
   ];
 
   treeSitterGrammars = grammars:
@@ -110,5 +118,6 @@
     basedpyright
     jdt-language-server
     wgsl-analyzer
+    lldb
   ];
 }

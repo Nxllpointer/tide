@@ -4,7 +4,7 @@ inputs: final: prev: {
   npins = import inputs.npins {pkgs = final;};
 
   wrapNpins = name: lockdir:
-    prev.stdenv.mkDerivation {
+    final.stdenv.mkDerivation {
       inherit name;
       src = final.npins;
       nativeBuildInputs = [prev.makeWrapper];
@@ -12,4 +12,12 @@ inputs: final: prev: {
     };
 
   fetchNpinsFlake = pin: builtins.getFlake "github:${pin.repository.owner}/${pin.repository.repo}/${pin.revision}";
+
+  code-lldb = final.stdenv.mkDerivation {
+    src = final.vscode-extensions.vadimcn.vscode-lldb;
+    installPhase = ''
+      mkdir -p $out/bin
+      ln -s $src
+    '';
+  };
 }

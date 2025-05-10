@@ -19,6 +19,8 @@ function M.other()
     { "<leader>cu", function() vim.cmd.Telescope("lsp_references") end, desc = "Usages" },
     { "<leader>cs", function() vim.cmd.Telescope("lsp_document_symbols") end, desc = "Symbols" },
 
+    { "<leader>d", function() require("debugmaster").mode.toggle() end, desc = "Debug mode" },
+
     { "<C-Space>", vim.cmd.stopinsert, desc = "Exit terminal mode", mode = "t" }
   }
 end

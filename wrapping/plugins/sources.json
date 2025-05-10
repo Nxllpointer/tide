@@ -56,6 +56,19 @@
       "url": "https://github.com/catppuccin/nvim/archive/5b5e3aef9ad7af84f463d17b5479f06b87d5c429.tar.gz",
       "hash": "0jmrwag2dx4b1g9x32xwxcr8y0l159hqks09z5miy99wav6dy7z2"
     },
+    "debugmaster": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "miroshQa",
+        "repo": "debugmaster.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c92aa8ba60683748f7907f7c2f00eb2fe5693678",
+      "url": "https://github.com/miroshQa/debugmaster.nvim/archive/c92aa8ba60683748f7907f7c2f00eb2fe5693678.tar.gz",
+      "hash": "1asyn5rpp346gxbmccrk2d94jcc1mgrx5ff4rzhvp8kvlrlqs120"
+    },
     "fidget": {
       "type": "GitRelease",
       "repository": {
@@ -180,6 +193,22 @@
       "revision": "a0fd35fcbb4cb479366f1dc5f20145fd718a3733",
       "url": "https://api.github.com/repos/MunifTanjim/nui.nvim/tarball/0.3.0",
       "hash": "0fjrnhfhq7sn3am7283adar0jlf6gcyq303kxkwqvxzvvdg9nirg"
+    },
+    "nvim-dap": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "mfussenegger",
+        "repo": "nvim-dap"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "0.9.0",
+      "revision": "6a41f9bb2a114ee6c4975fcad3bd383b8ce991d1",
+      "url": "https://api.github.com/repos/mfussenegger/nvim-dap/tarball/0.9.0",
+      "hash": "0f51zvj9qc7rp5p55w7ld4r3bx7qh605cm25sh5y2didl3r4zyks"
     },
     "nvim-lspconfig": {
       "type": "GitRelease",

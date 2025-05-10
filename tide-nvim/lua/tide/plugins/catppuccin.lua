@@ -17,6 +17,7 @@ return {
         which_key = true,
         treesitter = true,
         treesitter_context = true,
+        dap = true,
         native_lsp = { -- Having to specify all values is considered a bug https://github.com/catppuccin/nvim/issues/763
           enabled = true,
           virtual_text = {
