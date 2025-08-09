@@ -10,14 +10,11 @@
       url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
     };
-
-    mnw.url = "github:Gerg-L/mnw";
   };
 
   outputs = {
     nixpkgs,
     flake-utils,
-    mnw,
     ...
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
@@ -27,12 +24,7 @@
       };
 
       npins-plugins = pkgs.wrapNpins "npins-plugins" "./wrapping/plugins";
-
-      tide-wrapped = import ./wrapping {inherit pkgs mnw;};
-      tide = pkgs.runCommand "tide" {} ''
-        mkdir -p $out/bin
-        ln -s ${tide-wrapped}/bin/nvim $out/bin/tide
-      '';
+      tide = pkgs.callPackage ./wrapping {};
     in {
       devShells.default = pkgs.mkShell {
         packages = [npins-plugins];
@@ -40,7 +32,7 @@
 
       packages = {
         inherit tide;
-        config-dir = tide-wrapped.builtConfigDir;
+        config-dir = tide.configDir;
         default = tide;
       };
 

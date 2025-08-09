@@ -2,72 +2,28 @@
   pkgs,
   plugins,
 }: rec {
-  startPlugins = [
-    {
-      name = "lze";
-      src = plugins.lze;
-    }
-    {
-      name = "tide";
-      src = ./../tide-nvim;
-    }
-  ];
-  optPlugins = [
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins treeSitterGrammars)
-    (pkgs.fetchNpinsFlake plugins.blink-cmp).packages.${pkgs.system}.blink-cmp
-    {
-      name = "catppuccin";
-      src = plugins.catppuccin;
-    }
-    {
-      name = "lspconfig";
-      src = plugins.nvim-lspconfig;
-    }
-    {
-      name = "nvim-web-devicons";
-      src = plugins.nvim-web-devicons;
-    }
-    {
-      name = "which-key";
-      src = plugins.which-key;
-    }
-    {
-      name = "plenary";
-      src = plugins.plenary;
-    }
-    {
-      name = "nui";
-      src = plugins.nui;
-    }
-    {
-      name = "neo-tree";
-      src = plugins.neo-tree;
-    }
-    {
-      name = "lualine";
-      src = plugins.lualine;
-    }
-    {
-      name = "markview";
-      src = plugins.markview;
-    }
-    {
-      name = "telescope";
-      src = plugins.telescope;
-    }
-    {
-      name = "nvim-autopairs";
-      src = plugins.autopairs;
-    }
-    {
-      name = "gitsigns";
-      src = plugins.gitsigns;
-    }
-    {
-      name = "auto-save";
-      src = plugins.autosave;
-    }
-  ];
+  startPlugins = {
+    tide = ./../tide-nvim;
+    lze = plugins.lze;
+  };
+
+  optPlugins = {
+    nvim-treesitter = pkgs.vimPlugins.nvim-treesitter.withPlugins treeSitterGrammars;
+    blink-cmp = (pkgs.fetchNpinsFlake plugins.blink-cmp).packages.${pkgs.system}.blink-cmp;
+    catppuccin = plugins.catppuccin;
+    lspconfig = plugins.nvim-lspconfig;
+    nvim-web-devicons = plugins.nvim-web-devicons;
+    which-key = plugins.which-key;
+    plenary = plugins.plenary;
+    nui = plugins.nui;
+    neo-tree = plugins.neo-tree;
+    lualine = plugins.lualine;
+    markview = plugins.markview;
+    telescope = plugins.telescope;
+    nvim-autopairs = plugins.autopairs;
+    gitsigns = plugins.gitsigns;
+    auto-save = plugins.autosave;
+  };
 
   treeSitterGrammars = grammars:
     with grammars; [
