@@ -32,7 +32,7 @@
       mkdir -p $out/pack/tide-pack/{start,opt} $out/doc $out/parser
       ${linkPlugins "opt" options.optPlugins}
       ${linkPlugins "start" options.startPlugins}
-      ${linkTreesitterParsers options.optPlugins.nvim-treesitter.dependencies}
+      ${linkTreesitterParsers options.optPlugins.treesitter.dependencies}
       nvim --headless --clean +"helptags $out/doc" +qa
     '';
 in

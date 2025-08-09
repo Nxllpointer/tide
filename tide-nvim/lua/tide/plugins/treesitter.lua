@@ -1,5 +1,5 @@
 return {
-  "nvim-treesitter",
+  "treesitter",
   lazy = false,
   after = function()
     require("nvim-treesitter.configs").setup {

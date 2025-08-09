@@ -13,7 +13,7 @@
       "url": "https://github.com/windwp/nvim-autopairs/archive/68f0e5c3dab23261a945272032ee6700af86227a.tar.gz",
       "hash": "1ai3s1083dx6bddhrkv7d3hyq3zsrblizbvpgl09r1w9cijxhj8m"
     },
-    "autosave": {
+    "auto-save": {
       "type": "GitRelease",
       "repository": {
         "type": "GitHub",
@@ -149,7 +149,7 @@
       "url": "https://api.github.com/repos/MunifTanjim/nui.nvim/tarball/0.3.0",
       "hash": "0fjrnhfhq7sn3am7283adar0jlf6gcyq303kxkwqvxzvvdg9nirg"
     },
-    "nvim-lspconfig": {
+    "lspconfig": {
       "type": "GitRelease",
       "repository": {
         "type": "GitHub",
@@ -165,7 +165,7 @@
       "url": "https://api.github.com/repos/neovim/nvim-lspconfig/tarball/v1.7.0",
       "hash": "0y90cwkqad44ikjmy84ymypnw6jlvdnzngavv481i77lb3akz9vz"
     },
-    "nvim-web-devicons": {
+    "devicons": {
       "type": "GitRelease",
       "repository": {
         "type": "GitHub",

@@ -8,21 +8,9 @@
   };
 
   optPlugins = {
-    nvim-treesitter = pkgs.vimPlugins.nvim-treesitter.withPlugins treeSitterGrammars;
+    treesitter = pkgs.vimPlugins.nvim-treesitter.withPlugins treeSitterGrammars;
     blink-cmp = (pkgs.fetchNpinsFlake plugins.blink-cmp).packages.${pkgs.system}.blink-cmp;
-    catppuccin = plugins.catppuccin;
-    lspconfig = plugins.nvim-lspconfig;
-    nvim-web-devicons = plugins.nvim-web-devicons;
-    which-key = plugins.which-key;
-    plenary = plugins.plenary;
-    nui = plugins.nui;
-    neo-tree = plugins.neo-tree;
-    lualine = plugins.lualine;
-    markview = plugins.markview;
-    telescope = plugins.telescope;
-    nvim-autopairs = plugins.autopairs;
-    gitsigns = plugins.gitsigns;
-    auto-save = plugins.autosave;
+    inherit (plugins) auto-save autopairs catppuccin devicons gitsigns lspconfig lualine markview neo-tree telescope which-key nui plenary;
   };
 
   treeSitterGrammars = grammars:
