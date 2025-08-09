@@ -12,25 +12,12 @@
     };
 
     mnw.url = "github:Gerg-L/mnw";
-
-    npins = {
-      url = "github:andir/npins/0.3.0";
-      flake = false;
-    };
-
-    tinymist-rnote.url = "github:Nxllpointer/tinymist?ref=rnote";
-
-    neovim-src = {
-      url = "github:Nxllpointer/neovim/rtp-no-xdg-0.10";
-      flake = false;
-    };
   };
 
   outputs = {
     nixpkgs,
     flake-utils,
     mnw,
-    neovim-src,
     ...
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
@@ -41,7 +28,7 @@
 
       npins-plugins = pkgs.wrapNpins "npins-plugins" "./wrapping/plugins";
 
-      tide-wrapped = import ./wrapping {inherit pkgs mnw neovim-src;};
+      tide-wrapped = import ./wrapping {inherit pkgs mnw;};
       tide = pkgs.runCommand "tide" {} ''
         mkdir -p $out/bin
         ln -s ${tide-wrapped}/bin/nvim $out/bin/tide

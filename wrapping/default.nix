@@ -1,7 +1,6 @@
 {
   pkgs,
   mnw,
-  neovim-src,
 }: let
   setIsOptional = isOptional: plugins:
     map (
@@ -25,8 +24,6 @@ in
     withPerl = false;
     withPython3 = false;
     withRuby = false;
-
-    neovim = pkgs.neovim-unwrapped.overrideAttrs {src = neovim-src;};
 
     plugins = (setIsOptional false options.startPlugins) ++ (setIsOptional true options.optPlugins);
 

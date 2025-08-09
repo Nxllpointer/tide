@@ -1,8 +1,4 @@
 inputs: final: prev: {
-  tinymist-rnote = inputs.tinymist-rnote.packages.${final.system}.tinymist;
-
-  npins = import inputs.npins {pkgs = final;};
-
   wrapNpins = name: lockdir:
     prev.stdenv.mkDerivation {
       inherit name;
