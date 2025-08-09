@@ -55,7 +55,7 @@ function M.start(file)
     "tinymist.doStartPreview",
     {{
       "--task-id", TASK_ID,
-      "--refresh-style", "onType",
+      "--refresh-style", "on-type",
       "--data-plane-host", "127.0.0.1:0",
       "--control-plane-host", "127.0.0.1:0",
       file
