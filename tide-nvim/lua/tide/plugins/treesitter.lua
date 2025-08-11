@@ -1,6 +1,7 @@
 return {
   "treesitter",
   lazy = false,
+  dep_of = "markview",
   after = function()
     require("nvim-treesitter.configs").setup {
       ensure_installed = {},

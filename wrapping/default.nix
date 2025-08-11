@@ -35,6 +35,15 @@
       ${linkTreesitterParsers options.optPlugins.treesitter.dependencies}
       nvim --headless --clean +"helptags $out/doc" +qa
     '';
+
+  markviewQueries = lib.sources.sourceByRegex options.optPlugins.markview ["queries(/.*)?"];
+
+  runtimepath = [
+    markviewQueries # nvim and treesitter default queries must be overridden
+    "${nvim}/share/nvim/runtime"
+    "${nvim}/lib/nvim"
+    configDir
+  ];
 in
   runCommand "tide" {
     nativeBuildInputs = [makeBinaryWrapper];
@@ -42,7 +51,7 @@ in
   } ''
     mkdir -p $out/bin
     makeBinaryWrapper ${nvim}/bin/nvim $out/bin/tide \
-      --append-flags --cmd --append-flag "set rtp=${nvim}/share/nvim/runtime,${nvim}/lib/nvim,${configDir}" \
+      --append-flags --cmd --append-flag "set rtp=${builtins.concatStringsSep "," runtimepath}" \
       --append-flags --cmd --append-flag "let &pp=&rtp" \
       --suffix PATH : ${lib.makeBinPath options.extraPackages} \
       --set NVIM_APPNAME tide
