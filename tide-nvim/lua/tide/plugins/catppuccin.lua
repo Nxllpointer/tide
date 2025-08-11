@@ -13,10 +13,13 @@ return {
       default_integrations = false,
       integrations = {
         blink_cmp = true,
+        gitsigns = true,
+        markview = true,
         neotree = true,
-        which_key = true,
+        telescope = true,
         treesitter = true,
         treesitter_context = true,
+        which_key = true,
         native_lsp = { -- Having to specify all values is considered a bug https://github.com/catppuccin/nvim/issues/763
           enabled = true,
           virtual_text = {

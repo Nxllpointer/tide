@@ -4,6 +4,7 @@ return {
   after = function()
     require('lualine').setup {
       options = {
+        theme = "catppuccin",
         globalstatus = true
       },
       sections = {
