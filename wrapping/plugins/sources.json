@@ -195,20 +195,17 @@
       "hash": "1kg043h7dqcrqqgg8pp6hsldx7jdhlh8qwad2kkckia191xgnjgm"
     },
     "telescope": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
         "type": "GitHub",
         "owner": "nvim-telescope",
         "repo": "telescope.nvim"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
+      "branch": "master",
       "submodules": false,
-      "version": "0.1.8",
-      "revision": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026",
-      "url": "https://api.github.com/repos/nvim-telescope/telescope.nvim/tarball/0.1.8",
-      "hash": "15536kary8m35xqhksxkwxgak1b3iwmav41jlqhga8h8rs2sanvv"
+      "revision": "b4da76be54691e854d3e0e02c36b0245f945c2c7",
+      "url": "https://github.com/nvim-telescope/telescope.nvim/archive/b4da76be54691e854d3e0e02c36b0245f945c2c7.tar.gz",
+      "hash": "161qlx099ymi62qsd89srda605ynks1sswx3djamrwqp3dxb9596"
     },
     "which-key": {
       "type": "GitRelease",
