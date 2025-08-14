@@ -11,13 +11,16 @@ function M.other()
     { "<leader>g", function() vim.cmd.Telescope("live_grep") end, desc = "Grep Working Directory" },
     { "<leader>r", function() vim.cmd.Telescope("resume") end, desc = "Resume Telescope" },
 
-    { "<leader>c", group = "Code" },
-    { "<leader>ca", vim.lsp.buf.code_action, desc = "Action", mode = { "n", "v" } },
-    { "<leader>cf", vim.lsp.buf.format, desc = "Format", mode = { "n", "v" } },
-    { "<leader>cr", vim.lsp.buf.rename, desc = "Rename" },
-    { "<leader>cd", function() vim.cmd.Telescope("lsp_definitions") end, desc = "Definitions" },
-    { "<leader>cu", function() vim.cmd.Telescope("lsp_references") end, desc = "Usages" },
-    { "<leader>cs", function() vim.cmd.Telescope("lsp_document_symbols") end, desc = "Symbols" },
+    -- Extend/replace default LSP keybinds. :h lsp-defaults
+    -- "grn" is mapped in Normal mode to |vim.lsp.buf.rename()|
+    -- "gra" is mapped in Normal and Visual mode to |vim.lsp.buf.code_action()|
+    -- "gri" is mapped in Normal mode to |vim.lsp.buf.implementation()|
+    -- "grt" is mapped in Normal mode to |vim.lsp.buf.type_definition()|
+    -- "K" is mapped in Normal mode to |vim.lsp.buf.hover()|
+    { "grf", vim.lsp.buf.format, desc = "Format", mode = { "n", "v" } },
+    { "grr", function() vim.cmd.Telescope("lsp_references") end, desc = "References" },
+    { "gO", function() vim.cmd.Telescope("lsp_document_symbols") end, desc = "Document Symbols" },
+    { "grd", require("tide.lsp").toggle_diagnostic_mode, desc = "Toggle diagnostic mode" },
 
     { "<C-Space>", vim.cmd.stopinsert, desc = "Exit terminal mode", mode = "t" }
   }
