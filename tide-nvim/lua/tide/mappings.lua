@@ -20,7 +20,8 @@ function M.other()
     { "grf", vim.lsp.buf.format, desc = "Format", mode = { "n", "v" } },
     { "grr", function() vim.cmd.Telescope("lsp_references") end, desc = "References" },
     { "gO", function() vim.cmd.Telescope("lsp_document_symbols") end, desc = "Document Symbols" },
-    { "grd", require("tide.lsp").toggle_diagnostic_mode, desc = "Toggle diagnostic mode" },
+    { "grd", function() vim.cmd.Telescope("diagnostics") end, desc = "Workspace Diagnostics" },
+    { "grD", require("tide.lsp").toggle_diagnostic_mode, desc = "Toggle Diagnostic Mode" },
 
     { "<C-Space>", vim.cmd.stopinsert, desc = "Exit terminal mode", mode = "t" }
   }
